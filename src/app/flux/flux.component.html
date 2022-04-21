@@ -1,0 +1,31 @@
+
+<div class="row">
+    <div class="col-lg-12">
+        <ul class="nav custom-tab" id="myTab" role="tablist" *ngFor="let item of xmlItems | paginate: { itemsPerPage: 5, currentPage: pages } ">
+            <div class="row">
+                
+               
+                <table class="table">
+                   
+                    <tbody>
+                      <tr  >
+                        <td><img src="{{item.description}}"></td>
+                        <td><li class="nav-item" >
+                        <h5>{{item.title}}</h5>
+                        <p>{{item.description}}</p>
+                
+                    </li></td>
+                      </tr>
+                      
+                    </tbody>
+                  </table>
+                
+            </div>
+            
+        </ul><pagination-controls (pageChange)="pages = $event"></pagination-controls>
+    </div>
+   
+</div> 
+
+
+    

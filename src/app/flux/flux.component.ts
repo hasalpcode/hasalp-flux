@@ -1,14 +1,18 @@
-
 import { Component, OnInit } from '@angular/core';
 import * as xml2js from 'xml2js'; 
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { find } from 'rxjs';
+
+
+
+
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-flux',
+  templateUrl: './flux.component.html',
+  styleUrls: ['./flux.component.css']
 })
-export class AppComponent {
-  title = 'hasalp-flux';  
+export class FluxComponent {
+  title = 'read-xml-angular8';  
   public xmlItems: any;  
   constructor(private _http: HttpClient) { this.loadXML(); }  
   loadXML() {  
